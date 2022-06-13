@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.header{
+  /* position: fixed; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: black;
+}
+
+.header .links{
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(236, 232, 232);
+}
+
+.header .links:hover{
+  color: rgb(255, 140, 0);
+  transition: 0.5s all ease;
+}
+
+.showcase{
+  background: url('./img/banner.jpg') no-repeat center/
+  cover;
+  height: 600px;
+}
+
+.showcase .overlay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  color: #fefdfaa8;
+  background-color: rgba(-4, -10, 101, 0.4);
+}
+
+.showcase .overlay h1{
+  font-size: 36px;
+  padding-bottom: 20px;
+  box-shadow: 0px 5px 38px 2px #e07854;
+  border-radius: 13px;
+  cursor: progress;
+}
+
+.grid{
+  padding: 50px;
+}
+
+.grid h3{
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.grid .grid-items div{
+  background: #f1f1f1;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.grid .grid-items div img{
+  border-radius: 10px;
+}
+
+.grid .grid-items div h3{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.grid .grid-items div p{
+  line-height: 1.8;
+}
+
+.footer{
+  background-color: #333;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  
+}
+
+.footer ul li{
+  margin: 10px 0;
+}
+
+.footer ul li button{
+  background-color: transparent;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  letter-spacing: 1px;
+  transition: background-color  0.4s ease-in-out;
+}
+
+
+.footer ul li button:hover{
+  cursor: pointer;
+  background-color: blue;
+}
+
+/* Login */
+
+.login .form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login .form input{
+  margin: 8px 0;
+  width: 80vh;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.login .form input::placeholder{
+  font-weight: 800;
+  color: #000;
+}
+
+.login .form button{
+  background-color: blue;
+  color: white;
+  padding: 8px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  font-family: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.login .form button:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.7s ease;
+}
+
+
+@media (min-width: 768px){
+  .showcase .overlay h1 {
+    font-size: 64px;
+  }
+  
+  .showcase .overlay p{
+    font-size: 23px;
+    border-radius: 8px;
+    box-shadow: 2px 1px 39px 7px #bea14c;
+    cursor: progress;
+ }
+  .grid .grid-items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .grid .grid-items div img{
+    height: 150px;
+    width: 300px;
+  }
+
+  @media (min-width:992px){
+    .showcase{
+      background-position:top;
+    }
+  }
+
+  .grid .grid-items{
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+.login .form input{
+  width: 50vh;
+}
+}
+.personal-details{
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.personal-details select{
+  border: 0px;
+  border-bottom: 1px solid red;
+  outline: none;
+}
+
+
+.info-box{
+  display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.form-box h6{
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+
+}
+
+.tickets-count-box{
+  margin-top: 1rem;
+  display: flex;
+  border: 1px solid black;
+  width: fit-content;
+  gap: 1rem;
+
+}
+
+.tickets-count-box button{
+  width: 2rem;
+
+}
