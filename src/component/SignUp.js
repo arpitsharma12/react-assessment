@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BusContext from "../context/busContext";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const SignUp = ({state}) => {
@@ -32,7 +33,7 @@ setInpval(()=>{
     e.preventDefault()
     const {username, date, email, password} = inpval
     if (!username || !date || !email || !password ) {
-        return alert("Fill Form Properly")
+        return toast.warn("Fill Form Properly")
     } else{
       const newUser = {
         Name: username,
@@ -46,7 +47,7 @@ setInpval(()=>{
       });
 
       localStorage.setItem("UsersData", JSON.stringify([...users, newUser]));
-      alert(" User Registered Successfully ")
+      toast.success(" User Registered Successfully ")
       setTimeout(() => {
         loginNavi("/login");
       }, 1000);
